@@ -5,7 +5,7 @@ Joins <b>shapefile</b> from https://public.opendatasoft.com and uk measurements 
 https://cran.r-project.org/web/packages/nomisr/vignettes/introduction.html and plot on uk map with or without 
 barplot. 
 
-* For visualisation uses <b> matplotlib, seaborn, seaborn </b>
+* For visualisation uses <b> matplotlib, seaborn </b>
 * For shapefiles <b> geopandas </b>
 * For data validations <b> matplotlib_venn, pandas_profiling </b>
  
