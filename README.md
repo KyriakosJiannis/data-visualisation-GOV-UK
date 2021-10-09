@@ -1,21 +1,19 @@
 # data-visualisation-GOV-UK
- 
-Visualise UK map at district / unitary level or coutry level, using UK  
-<b>shapefile</b> from https://public.opendatasoft.com and uk measurements from <b> nomisr  R API </b>
-https://cran.r-project.org/web/packages/nomisr/vignettes/introduction.html and plot maps with or without barplot. 
+
+Visualise UK map at district / unitary level or coutry level, using UK <b>shapefile</b> from https://public.opendatasoft.com and UK measurements from <b> nomisr  R API </b> https://cran.r-project.org/web/packages/nomisr/vignettes/introduction.html and plot maps with or without bar plot. 
 
 * For visualisation uses <b> matplotlib, seaborn </b>
 * For shapefiles <b> geopandas </b>
- 
+
 <b> plot_nomisr_shapefile </b> :
-<br> combines nomisr data, with UK shapefiles and plot statistics on map 
+<br> combines nomisr data, with UK shapefiles and plot statistics on map
 
 
 #### Examples for religion census UK:
- 
+
 ```javascript
-plot_nomisr_shapefile(nomisr=df1, #nomisr data with measurements 
-                      shapefile=map_df1, #shapefile 
+plot_nomisr_shapefile(nomisr=df1, #nomisr data with measurements
+                      shapefile=map_df1, #shapefile
                       shapefilekey='lad18cd', #shapefile key column
                       subset="Christian",  #file subset
                       cmap="winter",  #cmap colours
@@ -50,4 +48,3 @@ plot_nomisr_shapefile(nomisr=df1[df1['GEOGRAPHY_CODE'].isin(map_df1['lad18cd'][m
 ```
 #### Output:
  ![Screenshot](./output/Figure_2.png)
- 
