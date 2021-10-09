@@ -1,17 +1,20 @@
-"""script which contain examples vizualisation examples from """
+""" Script with vizualisation examples """
 import pandas as pd
 from mainprog import loadShapefiles, plot_nomisr_shapefile
 
-# load the shape files from Pcloud, files extracted from
-shapefilezip1 = 'https://filedn.com/lK8J7mCaIwsQFcheqaDLG5z/data/ukdata/united-kingdom-local-authority-districts' \
-                '-december-2018.zip'
-shapefilezip2 = 'https://filedn.com/lK8J7mCaIwsQFcheqaDLG5z/data/ukdata/united-kingdom-counties-and-unitary' \
-                '-authorities-december-2017.zip'
+# load the Zip shape files ---------------------------------------------------------------------------------------------
+# districts level files
+shape_file_zip_path1 = \
+    'https://filedn.com/lK8J7mCaIwsQFcheqaDLG5z/data/ukdata/united-kingdom-local-authority-districts-december-2018.zip'
+# county level files
+shape_file_zip_path2 = \
+    'https://filedn.com/lK8J7mCaIwsQFcheqaDLG5z/data/ukdata/united-kingdom-counties-and-unitary' \
+    '-authorities-december-2017.zip'
 
-map_df1 = loadShapefiles(shapefilezip1)
-map_df2 = loadShapefiles(shapefilezip2)
+map_df1 = loadShapefiles(shape_file_zip_path1)  # districts level
+map_df2 = loadShapefiles(shape_file_zip_path2)  # county level
 
-"""Religion example"""
+""" Example for religion """
 # load the files from Pcloud, files extracted using R Api nomis
 df1 = pd.read_csv('https://filedn.com/lK8J7mCaIwsQFcheqaDLG5z/data/ukdata/nomis.religion.csv')
 df2 = pd.read_csv('https://filedn.com/lK8J7mCaIwsQFcheqaDLG5z/data/ukdata/nomis.religion2.csv')

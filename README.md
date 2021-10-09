@@ -1,13 +1,11 @@
 # data-visualisation-GOV-UK
  
-Visualise on UK map per district / unitary either coutry, statistical measurements from UK census, labour etc 
-Joins <b>shapefile</b> from https://public.opendatasoft.com and uk measurements from <b> nomisr  R API </b>
-https://cran.r-project.org/web/packages/nomisr/vignettes/introduction.html and plot on uk map with or without 
-barplot. 
+Visualise UK map at district / unitary level or coutry level, using UK  
+<b>shapefile</b> from https://public.opendatasoft.com and uk measurements from <b> nomisr  R API </b>
+https://cran.r-project.org/web/packages/nomisr/vignettes/introduction.html and plot maps with or without barplot. 
 
 * For visualisation uses <b> matplotlib, seaborn </b>
 * For shapefiles <b> geopandas </b>
-* For data validations <b> matplotlib_venn, pandas_profiling </b>
  
 <b> plot_nomisr_shapefile </b> :
 <br> combines nomisr data, with UK shapefiles and plot statistics on map 
