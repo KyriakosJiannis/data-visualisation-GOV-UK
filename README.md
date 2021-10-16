@@ -12,8 +12,8 @@ Visualise UK map at district / unitary level or coutry level, using UK <b>shapef
 #### Examples for religion census UK:
 
 ```javascript
-plot_nomisr_shapefile(nomisr=df1, #nomisr data with measurements
-                      shapefile=map_df1, #shapefile
+plot_nomisr_shapefile(nomisr=df, #nomisr data with measurements
+                      shapefile=map_df, #shapefile
                       shapefilekey='lad18cd', #shapefile key column
                       subset="Christian",  #file subset
                       cmap="winter",  #cmap colours
@@ -38,8 +38,8 @@ counties = ['Northamptonshire',
             'Buckinghamshire',
             'Warwickshire']
 
-plot_nomisr_shapefile(nomisr=df1[df1['GEOGRAPHY_CODE'].isin(map_df1['lad18cd'][map_df1['county'].isin(counties)])],
-                      shapefile=map_df1,
+plot_nomisr_shapefile(nomisr=df[df['GEOGRAPHY_CODE'].isin(map_df['lad18cd'][map_df['county'].isin(counties)])],
+                      shapefile=map_df,
                       shapefilekey='lad18cd',
                       subset="Christian",
                       cmap="winter",

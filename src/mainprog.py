@@ -1,4 +1,4 @@
-""" Load Shapefiles and statistical data and plot on map """
+""" Load Shapefiles and statistical input and plot on map """
 import geopandas as gpd
 import glob
 import io
@@ -12,7 +12,7 @@ import zipfile
 
 def loadShapefiles(zip_file_url):
     """
-    function that loads shape zipped files and returns pandas a data frame
+    function that loads shape zipped files and returns pandas a input frame
     """
 
     r = requests.get(zip_file_url)
@@ -35,11 +35,11 @@ def plot_nomisr_shapefile(nomisr,
                           shapefilekey='',
                           subset='',
                           cmap='winter',
-                          title='United Kingdom labour data',
+                          title='United Kingdom labour input',
                           barchart="off"):
     """
-    Combines nomisr data, with UK shapefiles and plot statistics on map
-    It uses R API outputs to get the UK labour data, nomisr, https://cran.r-project.org/web/packages/nomisr/index.html
+    Combines nomisr input, with UK shapefiles and plot statistics on map
+    It uses R API outputs to get the UK labour input, nomisr, https://cran.r-project.org/web/packages/nomisr/index.html
     and UK shapefiles from https://public.opendatasoft.com
 
     Parameters
@@ -59,7 +59,7 @@ def plot_nomisr_shapefile(nomisr,
     # delete all total rows
     nomisr = nomisr.drop(nomisr[(nomisr.C_RELPUK11_NAME == "All categories: Religion")].index)
 
-    # check nomisr available data
+    # check nomisr available input
     # f1, ax1 = plt.subplots(1, figsize=(10, 10))
     # f1.suptitle("shapefile areas", fontsize=16)
     # ax1 = shapefile.plot(ax=ax1, linewidth=0.2, edgecolor='grey', )
