@@ -1,20 +1,22 @@
-# this is an R script uses Nomis API to download UK census input
-# from more info https://docs.evanodell.com/nomisr/articles/introduction.html
+# R script for Nomis API to download UK census data sets
+# More info https://docs.evanodell.com/nomisr/articles/introduction.html
 
-library(nomisr)
+library('nomisr')
 
+# get all available sets info
 x <- nomis_data_info()
+
 # search datasets for Religion information
 search_A <- nomis_search(name = "*Religion*")
 tibble::glimpse(search_A)
 
 # check available measures
 search_A_measures <- nomis_get_metadata("NM_529_1", "measures")
-search_A_measures
+print(search_A_measures)
 
 # check available geography types
 search_A_geography <- nomis_get_metadata("NM_529_1", "geography", "TYPE")
-search_A_geography
+print(search_A_geography)
 
 # extract input at district / unitary level
 nomis_religion <- nomis_get_data(id = "NM_529_1",
@@ -44,7 +46,7 @@ nomis_religion2 <- nomis_get_data(id = "NM_529_1",
                                             "MEASURES_NAME",
                                             "OBS_VALUE"))
 
-#  save the files
+#  save files at model repo
 write.csv(nomis_religion,
           "./input/nomis_religion.csv",
           row.names = FALSE)
