@@ -11,7 +11,7 @@ Visualise UK map at district / unitary level or coutry level, using UK <b>shapef
 
 #### Examples for religion census UK:
 
-```javascript
+```python
 plot_nomisr_shapefile(nomisr=df, #nomisr data with measurements
                       shapefile=map_df, #shapefile
                       shapefilekey='lad18cd', #shapefile key column
@@ -23,7 +23,7 @@ plot_nomisr_shapefile(nomisr=df, #nomisr data with measurements
 #### Output:
  ![Screenshot](./output/Figure_1.png)
 
-```javascript
+```python
 # sub selection specific counties, ie. for Northamptonshire and its neighbours area
 counties = ['Northamptonshire',
             'Central Bedfordshire',
